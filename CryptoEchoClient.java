@@ -38,9 +38,6 @@ public class CryptoEchoClient {
             
             
             try {
-               	File file = new File(".");
-            	for(String fileNames : file.list()) System.out.println(fileNames);
-
                 FileInputStream fis = new FileInputStream("randomBytes");
                 randomBytes = new byte[fis.available()];
                 System.out.println(randomBytes.length);
