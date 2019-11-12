@@ -16,7 +16,7 @@ public class CryptoMultiEchoServer {
         int sessionID = 0; // assign incremental session ids to each client connection
 
         try {
-            ServerSocket s = new ServerSocket(1019);
+            ServerSocket s = new ServerSocket(1020);
             // The server runs until an error occurs
             // or is stopped externally
             for (;;) {

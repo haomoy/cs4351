@@ -24,7 +24,7 @@ public class CryptoEchoClient {
             host = userInput.nextLine();
         }
         try {
-            Socket socket = new Socket(host, 1019);
+            Socket socket = new Socket(host, 1020);
             // in and out for socket communication using strings
             BufferedReader in
                     = new BufferedReader(new InputStreamReader(socket.getInputStream()));
