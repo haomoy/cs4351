@@ -6,6 +6,8 @@ import java.util.Scanner;
 import javax.crypto.*;
 import javax.crypto.spec.*;
 
+import java.util.Base64;
+
 public class CryptoEchoClient {
  // The MultiEchoServer was provided by Yoonsik Cheon at least 10 years ago.
  // It was modified several times by Luc Longpre over the years.
@@ -75,7 +77,10 @@ public class CryptoEchoClient {
                 } else {
                     // Receive the reply from the server and print it
                     // You need to modify this to handle encrypted reply
-                    System.out.println(in.readLine());
+                	encryptedByte = (byte[]) objectInput.readObject();
+                	
+                	String s = Base64.getEncoder().encodeToString(encryptedByte);                	
+                    System.out.println(s);
                 }
             }
         } catch (Exception e) {
